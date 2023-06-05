@@ -15,4 +15,15 @@
       <button type="submit" class="btn btn-primary btn-block">Add to Cart</button>
     </form>
   </div>
+  {% include 'card',
+    title: product.title,
+    vendor: product.vendor,
+    title_link: product.url,
+    price: product.price,
+    price_compare: product.compare_at_price_max,
+    price_varies: product.price_varies,
+    badge: product.badge,
+    rating: product.rating,
+    featured_image: product.featured_image
+  %}
 </div>
