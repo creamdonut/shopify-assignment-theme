@@ -24,11 +24,11 @@
 {% for setting in section.settings %}
   {% assign product = all_products[setting.id] %}
   {% if product %}
-    <div class="product-upsell-item">
-      <h2>{{ product.title }}</h2>
-      <img src="{{ product.images.first | img_url: 'medium' }}" alt="{{ product.title }}">
-      <p>{{ product.description }}</p>
-      <a href="{{ product.url }}">View Product</a>
-    </div>
+    {% include 'product-upselling',
+      title: product.title,
+      desciprion: product.description,
+      url: product.url,
+      image: product.images.first
+    %}
   {% endif %}
 {% endfor %}
