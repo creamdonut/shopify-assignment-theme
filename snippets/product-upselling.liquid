@@ -1,5 +1,6 @@
 <div class="product-upsell-item">
-  <h2>{{ product.label }}</h2>
+  <h2>{{ product.title }}</h2>
+  <img src="{{ product.images.first | img_url: 'medium' }}" alt="{{ product.title }}">
   <p>{{ product.description }}</p>
   <a href="{{ product.url }}">View Product</a>
 </div>
